@@ -4,6 +4,7 @@ deploy:
   steps:
     terraformPlan:
       before:
+        - ls -la
         - echo 'export PROPOGATED=true' >> ~/.profile
       after:
         - echo $PROPOGATED
